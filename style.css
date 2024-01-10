@@ -368,6 +368,10 @@ nav i{
     display: none;
 }
 
+.fa.fa-times {
+    display: none;
+}
+
 @media (max-width: 840px){
     .logo{
         justify-content: center;
@@ -393,7 +397,10 @@ nav i{
     nav i{
         display: block;
         font-size: 25px;
-
+    }
+    .fa.fa-times{
+        display: block;
+        
     }
 
     nav ul{
