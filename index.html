@@ -1,213 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Utkarsh Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-</head>
+    <style>
+      img {
+        object-position: center;
+        object-fit: cover;
+      }
+      .blur-load {
+        background-size: cover;
+        background-position: center;
+      }
+      .blur-load.loaded > img {
+        opacity: 1;
+      }
 
-<body>
+      .blur-load > img {
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <h1 class="logo"><span>U</span>tkarsh.</h1>
-                <ul id="sideMenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <!-- <i class="ri-restaurant-2-line" onclick="closeMenu()"></i> -->
-                    <i class="fa fa-times"  onclick="closeMenu()"></i>
-                </ul>
-                <i class="ri-menu-line" onclick="openMenu()"></i>
-            </nav>
+      <div class="container">
+        <nav>
+          <h1 class="logo"><span>U</span>tkarsh.</h1>
+          <ul id="sideMenu" role="list">
+            <li role="listitem"><a href="#header" role="link"  >Home</a></li>
+            <li role="listitem"><a href="#about" role="link">About</a></li>
+            <li role="listitem"><a href="#Projects" role="link">Projects</a></li>
+            <li role="listitem"><a href="#Skills" role="link">Skills</a></li>
+            <li role="listitem"><a href="#contact" role="link">Contact</a></li>
+            <!-- <i class="ri-restaurant-2-line" onclick="closeMenu()"></i> -->
+            <i class="fa fa-times" onclick="closeMenu()"></i>
+          </ul>
+          <i class="ri-menu-line" onclick="openMenu()"></i>
+        </nav>
 
-            <div class="header-content">
-                <div class="header-text left-header">
-                    <p>Frontend Developer</p>
-                    <h1>Hi, I'm <span>Utkarsh</span> <br> Final year Student</h1>
-                </div>
-                <div class="right-header">
-                    <img loading="lazy" src="./Images/MeStudy.png">
-                </div>
-            </div>
+        <div class="header-content">
+          <div class="header-text left-header">
+            <p>Frontend Developer</p>
+            <h1>
+              Hi, I'm <span>Utkarsh</span> <br />
+              Final year Student
+            </h1>
+          </div>
+          <div
+            class="right-header blur-load"
+            style="background-image: url(Images/MeStudyLite.png)"
+            role="img"
+          >
+            <img loading="lazy" src="./Images/MeStudy.png" alt="MeStudyImage" />
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- *************** About ********************* -->
 
     <div id="about">
-        <div class="container">
-            <h1 class="sub-title">About Me</h1>
-            <div class="row">
-                <!-- <h1>About Me</h1> -->
-                <div class="about-col-1">
-                    <img loading="lazy" src="Images/Me.jpeg" alt="User">
-                </div>
-                <div class="about-col-2">
-                    <p>
-                        Hello, this is Utkarsh. I am a final-year student pursuing B.Tech in CS from MIT Ujjain. I have a good understanding of web development languages such as <span>HTML, CSS, JavaScript, ReactJS framework, Firebase, and a little bit of Next.js.</span> Utilizing these languages, I have developed several projects mentioned below. I also define myself as a problem solver, having solved around <span>400+ DSA</span> questions across multiple coding platforms (LeetCode, GFG, Coding Ninjas), with a highest contest rating of <span>1590</span> on LeetCode. </p>
-
-                </div>
-            </div>
+      <div class="container">
+        <h1 class="sub-title">About Me</h1>
+        <div class="row">
+          <!-- <h1>About Me</h1> -->
+          <div
+            class="about-col-1 blur-load"
+            style="background-image: url(./Images/MeLite.png)"
+            role="img"
+          >
+            <img loading="lazy" src="Images/Me.jpeg" alt="MineImage" />
+          </div>
+          <div class="about-col-2">
+            <p role="doc-introduction">
+              Hello, this is Utkarsh. I am a final-year student pursuing B.Tech
+              in CS from MIT Ujjain. I have a good understanding of web
+              development languages such as
+              <span
+                >HTML, CSS, JavaScript, ReactJS framework, Firebase, and a
+                little bit of Next.js.</span
+              >
+              Utilizing these languages, I have developed several projects
+              mentioned below. I also define myself as a problem solver, having
+              solved around <span>400+ DSA</span> questions across multiple
+              coding platforms (LeetCode, GFG, Coding Ninjas), with a highest
+              contest rating of <span>1590</span> on LeetCode.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- ***************** Projects ***************** -->
     <div id="Projects">
-        <div class="container">
-            <h1 class="sub-title">Projects</h1>
-            <div class="projects-list">
-                <div class="project-card">
-                    <img loading="lazy" src="./Images/SnapExplorer.png" alt="">
-                    <p class="about-project">
-                        SnapExplorer is an online image exploring website.
-                        <!-- where you just need to enter keywords for the snaps that are you looking for and it will shows you beautiful images for this particular keyword -->
-                    </p>
-                    <a href="https://snap-explorer-cszs.vercel.app/" target="_blank"><i
-                            class="ri-share-box-line"></i></a>
-
-                </div>
-                <div class="project-card">
-                    <img loading="lazy" src="./Images/TicTacToe.png">
-                    <p class="about-project">
-                        TicTacToe,game for two players developed using ReactJs.
-                    </p>
-                    <a href="https://github.com/utkarsh134/TicTacToe-Game" target="_blank"><i
-                            class="ri-share-box-line"></i></a>
-                </div>
-                <div class="project-card">
-                    <img loading="lazy" src="./Images/Quizzical.png" alt="">
-                    <p class="about-project">
-                        Quizzical, quiz website where you can check your knowledge Score.
-                    </p>
-                    <a href="https://quiz-whiz-dusky.vercel.app/" target="_blank"><i class="ri-share-box-line"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <img loading="lazy" src="./Images/DiceMania.png" alt="">
-                    <p class="about-project">
-                        DiceMania is a one player dice Game where user can roll a dice.
-                    </p>
-                    <a href="https://github.com/utkarsh134/DiceMania" target="_blank"><i
-                            class="ri-share-box-line"></i></a>
-                </div>
-
-
-
-                <div class="project-card">
-                    <img loading="lazy" src="./Images/TextTrove Notes.png" alt="">
-                    <p class="about-project">
-                        Textrove is one stop solutions for your daily notes.
-                    </p>
-                    <a href="https://text-troove.vercel.app/" target="_blank"><i class="ri-share-box-line"></i></a>
-                </div>
-                <div class="project-card">
-                    <img loading="lazy" src="./Images/QRify.png" alt="">
-                    <p class="about-project">
-                        Qrify generates QR for every keywords that will be Scannable.
-                    </p>
-                    <a href="https://q-rify-eta.vercel.app/" target="_blank"><i class="ri-share-box-line"></i></a>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-list">
+          <div class="project-card">
+            <div
+              class="blur-load"
+              style="background-image: url(./Images/SnapExplorerLite.png)"
+              role="img"
+            >
+              <img
+                loading="lazy"
+                src="./Images/SnapExplorer.png"
+                alt="SnapExplorer Image"
+              />
             </div>
-        </div>
-    </div>
+            <p class="about-project">
+              SnapExplorer is an online image exploring website.
+              <!-- where you just need to enter keywords for the snaps that are you looking for and it will shows you beautiful images for this particular keyword -->
+            </p>
+            <a href="https://snap-explorer-cszs.vercel.app/" target="_blank"
+              ><i class="ri-share-box-line"></i
+            ></a>
+          </div>
+          <div class="project-card">
+            <div
+              class="blur-load"
+              style="background-image: url(./Images/TicTacToeLite.png)"
+              role="img"
+            >
+              <img
+                loading="lazy"
+                src="./Images/TicTacToe.png"
+                alt="TicTacToe Image"
+              />
+            </div>
+            <p class="about-project">
+              TicTacToe,game for two players developed using ReactJs.
+            </p>
+            <a
+              href="https://github.com/utkarsh134/TicTacToe-Game"
+              target="_blank"
+              ><i class="ri-share-box-line"></i
+            ></a>
+          </div>
+          <div class="project-card">
+            <div
+              class="blur-load"
+              style="background-image: url(./Images/QuizzicalLite.png)"
+              role="img"
+            >
+              <img
+                loading="lazy"
+                src="./Images/Quizzical.png"
+                alt="QuizApp Image"
+              />
+            </div>
+            <p class="about-project">
+              Quizzical, quiz website where you can check your knowledge Score.
+            </p>
+            <a href="https://quiz-whiz-dusky.vercel.app/" target="_blank"
+              ><i class="ri-share-box-line"></i
+            ></a>
+          </div>
 
+          <div class="project-card">
+            <div
+              class="blur-load"
+              style="background-image: url(./Images/DiceManiaLite.png)"
+              role="img"
+            >
+              <img
+                loading="lazy"
+                src="./Images/DiceMania.png"
+                alt="DiceMania Image"
+              />
+            </div>
+            <p class="about-project">
+              DiceMania is a one player dice Game where user can roll a dice.
+            </p>
+            <a href="https://github.com/utkarsh134/DiceMania" target="_blank"
+              ><i class="ri-share-box-line"></i
+            ></a>
+          </div>
+
+          <div class="project-card">
+            <div
+              class="blur-load"
+              style="background-image: url(./Images/TextTroveLite.png)"
+              role="img"
+            >
+              <img
+                loading="lazy"
+                src="./Images/TextTrove Notes.png"
+                alt="TextTrove Image"
+              />
+            </div>
+            <p class="about-project">
+              Textrove is one stop solutions for your daily notes.
+            </p>
+            <a href="https://text-troove.vercel.app/" target="_blank"
+              ><i class="ri-share-box-line"></i
+            ></a>
+          </div>
+          <div class="project-card">
+            <div
+              class="blur-load"
+              style="background-image: url(./Images/QRifyLite.png)"
+              role="img"
+            >
+              <img loading="lazy" src="./Images/QRify.png" alt="Qrify Image" />
+            </div>
+            <p class="about-project">
+              Qrify generates QR for every keywords that will be Scannable.
+            </p>
+            <a href="https://q-rify-eta.vercel.app/" target="_blank"
+              ><i class="ri-share-box-line"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- **************** Skills / Languages ******************** -->
 
     <div id="Skills">
-        <div class="container">
-            <h1 class="sub-title">My Skills</h1>
-            <div class="skills-list">
-                <div class="skill-card">
-                    <i class="ri-html5-line"></i>
-                    <h2>HTML</h2>
-                    <p>HTML is a standard markup language for creating web pages</p>
-                </div>
-                <div class="skill-card">
-                    <i class="ri-css3-line"></i>
-                    <h2>CSS</h2>
-                    <p>CSS describes the look/design of a document </p>
-                </div>
-                <div class="skill-card">
-                    <i class="ri-javascript-line"></i>
-                    <h2>JavaScript</h2>
-                    <p>JavaScript is used to makae web pages interactive</p>
-                </div>
-                <div class="skill-card">
-                    <i class="ri-reactjs-fill"></i>
-                    <h2>ReactJs</h2>
-                    <p>ReactJs resolves complex UI problems</p>
-                </div>
-                <div class="skill-card">
-                    <i class="ri-flower-fill"></i>
-                    <h2>Tailwind</h2>
-                    <p>A framework enable to write CSS in HTML using predefined classes</p>
-                </div>
-                <div class="skill-card">
-                    <i class="ri-code-s-slash-line"></i>
-                    <h2>SQL</h2>
-                    <p>Learned SQL for the oncampus placements</p>
-                </div>
-                <div class="skill-card">
-                    <i class="ri-code-s-slash-line"></i>
-                    <h2>C</h2>
-                    <p>Journey of my programming is started from here</p>
-                </div>
-                <div class="skill-card">
-                    <i class="ri-code-s-slash-line"></i>
-                    <h2>C++</h2>
-                    <p>Learned C++ to understand Object Orientation</p>
-                </div>
-                <div class="skill-card">
-                    <i class="ri-code-s-slash-line"></i>
-                    <h2>DSA</h2>
-                    <p>Solved around 400+ questions of DSA</p>
-                </div>
-
-            </div>
+      <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-list">
+          <div class="skill-card">
+            <i class="ri-html5-line"></i>
+            <h2>HTML</h2>
+            <p>HTML is a standard markup language for creating web pages.</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-css3-line"></i>
+            <h2>CSS</h2>
+            <p>CSS describes the look/design of a document.</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-javascript-line"></i>
+            <h2>JavaScript</h2>
+            <p>JavaScript is used to makae web pages interactive</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-reactjs-fill"></i>
+            <h2>ReactJs</h2>
+            <p>ReactJs resolves complex UI problems</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-flower-fill"></i>
+            <h2>Tailwind</h2>
+            <p>
+              A framework enable to write CSS in HTML using predefined classes
+            </p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-code-s-slash-line"></i>
+            <h2>SQL</h2>
+            <p>Learned SQL for the oncampus placements</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-code-s-slash-line"></i>
+            <h2>C</h2>
+            <p>Journey of my programming is started from here</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-code-s-slash-line"></i>
+            <h2>C++</h2>
+            <p>Learned C++ to understand Object Orientation</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-code-s-slash-line"></i>
+            <h2>DSA</h2>
+            <p>Solved around 400+ questions of DSA</p>
+          </div>
         </div>
+      </div>
     </div>
-
-
 
     <!-- **************** Contact ******************* -->
 
     <div id="contact">
-        <div class="container">
-            <h1 class="sub-title">Contact Me</h1>
-            <div class="details">
-                <div class="contact-details">
-                    <p><i class="ri-mail-line"></i>utkarshpatidar211@gmail.com</p>
-                    <p><i class="ri-phone-line"></i>+91 7828298512</p>
-                </div>
-                <div class="Links">
-                    <div class="social-icons">
-                        <a href="https://github.com/utkarsh134" target="_blank"><i class="ri-github-fill"></i></a>
-                        <a href="https://leetcode.com/Utkarsh_21/" target="_blank"><i
-                                class="ri-code-s-slash-line"></i></a>
-                        <a href="https://vercel.com/utkarsh-patidars-projects" target="_blank"><i
-                                class="ri-file-upload-line"></i></a>
-                    </div>
-                    <a href="Images/Utkarsh_CV_2024.pdf" download class="btn">Download CV</a>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <div class="details">
+          <div class="contact-details">
+            <p><i class="ri-mail-line"></i>utkarshpatidar211@gmail.com</p>
+            <p><i class="ri-phone-line"></i>+91 7828298512</p>
+          </div>
+          <div class="Links">
+            <div class="social-icons">
+              <a href="https://github.com/utkarsh134" target="_blank"
+                ><i class="ri-github-fill"></i
+              ></a>
+              <a href="https://leetcode.com/Utkarsh_21/" target="_blank"
+                ><i class="ri-code-s-slash-line"></i
+              ></a>
+              <a
+                href="https://vercel.com/utkarsh-patidars-projects"
+                target="_blank"
+                ><i class="ri-file-upload-line"></i
+              ></a>
             </div>
+            <a href="Images/Utkarsh_CV_2024.pdf" download class="btn"
+              >Download CV</a
+            >
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="copyright">
-        <p style="color: white;">Copyright © Utkarsh. Made with <i class="ri-heart-fill"></i> by Me</p>
+      <p style="color: white">
+        Copyright © Utkarsh. Made with <i class="ri-heart-fill"></i> by Me
+      </p>
     </div>
 
-
+    <!-- <script
+    src="https://kit.fontawesome.com/fb0e7c2c1c.js"
+    crossorigin="anonymous"
+    ></script> -->
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/fb0e7c2c1c.js" crossorigin="anonymous"></script>
-</body>
-
+  </body>
 </html>
