@@ -36,9 +36,11 @@
         <nav>
           <h1 class="logo"><span>U</span>tkarsh.</h1>
           <ul id="sideMenu" role="list">
-            <li role="listitem"><a href="#header" role="link"  >Home</a></li>
+            <li role="listitem"><a href="#header" role="link">Home</a></li>
             <li role="listitem"><a href="#about" role="link">About</a></li>
-            <li role="listitem"><a href="#Projects" role="link">Projects</a></li>
+            <li role="listitem">
+              <a href="#Projects" role="link">Projects</a>
+            </li>
             <li role="listitem"><a href="#Skills" role="link">Skills</a></li>
             <li role="listitem"><a href="#contact" role="link">Contact</a></li>
             <!-- <i class="ri-restaurant-2-line" onclick="closeMenu()"></i> -->
@@ -73,12 +75,14 @@
         <h1 class="sub-title">About Me</h1>
         <div class="row">
           <!-- <h1>About Me</h1> -->
-          <div
-            class="about-col-1 blur-load"
-            style="background-image: url(./Images/MeLite.png)"
-            role="img"
-          >
-            <img loading="lazy" src="Images/Me.jpeg" alt="MineImage" />
+          <div class="about-col-1">
+            <div
+              class="blur-load"
+              style="background-image: url(./Images/MeLite.png)"
+              role="img"
+            >
+              <img loading="lazy" src="Images/Me.jpeg" alt="MineImage" >
+            </div>
           </div>
           <div class="about-col-2">
             <p role="doc-introduction">
@@ -105,6 +109,26 @@
       <div class="container">
         <h1 class="sub-title">Projects</h1>
         <div class="projects-list">
+          <div class="project-card">
+            <div
+              class="blur-load"
+              style="background-image: url(./Images/RasoAiLite.png)"
+              role="img"
+            >
+              <img
+                loading="lazy"
+                src="./Images/RasoAi.png"
+                alt="RasoAi Image"
+              />
+            </div>
+            <p class="about-project">
+             RasoAi is created for the generation of recipes using cohere-ai.
+              <!-- where you just need to enter keywords for the snaps that are you looking for and it will shows you beautiful images for this particular keyword -->
+            </p>
+            <a href="https://github.com/utkarsh134/RasoAi" target="_blank"
+              ><i class="ri-share-box-line"></i
+            ></a>
+          </div>
           <div class="project-card">
             <div
               class="blur-load"

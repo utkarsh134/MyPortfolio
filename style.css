@@ -45,10 +45,9 @@ nav {
 
 nav ul li {
   display: inline-block;
-  margin: 1vmin 2.7vmin;
+  margin: 1vmin 2.4vmin;
   /* margin: 10px 20px; */
   list-style: none;
-  /* padding: 8px 4px; */
   padding: 0.9vmin 0.5vmin;
   border-radius: 8px;
   font-weight: 600;
@@ -71,7 +70,7 @@ nav ul li:hover {
 }
 
 .header-content {
-  min-height: calc(100vh - 95px);
+  height: auto;
   font-size: 30px;
   display: flex;
   justify-content: space-between;
@@ -109,7 +108,7 @@ nav ul li:hover {
 /* ############## About ################ */
 
 #about {
-  min-height: 100vh;
+  height: auto;
 }
 
 .row {
@@ -119,17 +118,29 @@ nav ul li:hover {
 }
 
 .about-col-1 {
-  height: 60vh;
+  height: 30%;
   width: 35%;
   border-radius: 15px;
 }
 
-.about-col-1 img {
+/* .about-col-1  img {
+  width: inherit;
+  height: inherit;
+  border-radius: 15px;
+  box-shadow: 18px 18px 5px 5px gray
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+} */
+
+.about-col-1 > div{
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  /* box-shadow: 18px 18px 5px 5px gray */
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  img{
+    width: inherit;
+    height: inherit;
+    border-radius: 15px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
 }
 
 .about-col-2 {
@@ -163,7 +174,6 @@ nav ul li:hover {
 #Projects {
   width: 100%;
   height: auto;
-  min-height: 100vh;
 }
 
 .projects-list {
@@ -172,13 +182,13 @@ nav ul li:hover {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
+  
 }
 
 .project-card {
   width: 350px;
-  /* width: 30vmax; */
   height: 400px;
-  /* height: 3vmax; */
   margin: 20px 5px;
   transition: transform 0.2s;
   cursor: pointer;
@@ -226,7 +236,7 @@ nav ul li:hover {
 /* -------------------- Skills ---------------------- */
 
 #Skills {
-  min-height: 100vh;
+  height: auto;
 }
 
 .skills-list {
@@ -373,16 +383,33 @@ nav i {
   ul {
     margin: 0 auto;
   }
-  .about-col-1,
-  .about-col-2 {
-    flex-basis: 100%;
-    text-align: center;
+
+  .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+  /* .about-col-1
+   {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .about-col-2
+   {
+    width: 100%;
+    text-align: center;
+  } */
+
   .about-col-1 {
-    img {
-      width: 70%;
-      margin-top: 20px;
-    }
+   margin: auto;
+   height: 30% ;
+   width: 40%;
+  }
+
+  .about-col-2{
+    margin-top: 10px;
   }
 }
 
