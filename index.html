@@ -36,17 +36,17 @@
         <nav>
           <h1 class="logo"><span>U</span>tkarsh.</h1>
           <ul id="sideMenu" role="list">
-            <li role="listitem"><a href="#header" role="link">Home</a></li>
-            <li role="listitem"><a href="#about" role="link">About</a></li>
+            <li role="listitem"><a href="#header" onclick="closeMenu()" role="link">Home</a></li>
+            <li role="listitem"><a href="#about" onclick="closeMenu()" role="link">About</a></li>
             <li role="listitem">
-              <a href="#Projects" role="link">Projects</a>
+              <a href="#Projects" onclick="closeMenu()" role="link">Projects</a>
             </li>
-            <li role="listitem"><a href="#Skills" role="link">Skills</a></li>
-            <li role="listitem"><a href="#contact" role="link">Contact</a></li>
+            <li role="listitem"><a href="#Skills" onclick="closeMenu()" role="link">Skills</a></li>
+            <li role="listitem"><a href="#contact" onclick="closeMenu()" role="link">Contact</a></li>
             <!-- <i class="ri-restaurant-2-line" onclick="closeMenu()"></i> -->
-            <i class="fa fa-times" onclick="closeMenu()"></i>
+            <i class="ri-close-circle-line" onclick="closeMenu()"></i>
           </ul>
-          <i class="ri-menu-line" onclick="openMenu()"></i>
+          <i class="ri-menu-line" style="cursor: pointer" onclick="openMenu()"></i>
         </nav>
 
         <div class="header-content">
@@ -273,6 +273,16 @@
             <i class="ri-reactjs-fill"></i>
             <h2>ReactJs</h2>
             <p>ReactJs resolves complex UI problems</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-javascript-line"></i>
+            <h2>Node.js</h2>
+            <p>Node.js is a JavaScript runtime Environment</p>
+          </div>
+          <div class="skill-card">
+            <i class="ri-javascript-line"></i>
+            <h2>Express.js</h2>
+            <p>Express.js is a backend web application framework for Node.js</p>
           </div>
           <div class="skill-card">
             <i class="ri-flower-fill"></i>

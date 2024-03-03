@@ -7,6 +7,8 @@ function closeMenu() {
   sideMenu.style.right = "-200px";
 }
 
+// LazyLoadImage Concept
+
 const blurDivs = document.querySelectorAll(".blur-load");
 blurDivs.forEach((div) => {
   const img = div.querySelector("img");
